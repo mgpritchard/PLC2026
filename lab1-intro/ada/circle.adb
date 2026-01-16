@@ -12,7 +12,7 @@ procedure Circle is
   procedure SetSize is
     last : Integer;
   begin
-    size := 15;
+    size := 20;
     -- Get(Argument(1),size,last);
   end SetSize;
 
