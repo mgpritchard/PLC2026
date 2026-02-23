@@ -69,9 +69,9 @@ public class PlaylistVars {
         List<Item> playlist1 = Arrays.asList(new Item[] { piece1, advert1, piece2 });
         System.out.printf("playlist1 = %s\n", playlist1);
 
-        // calculate the overall length of playlist1:
-        Float length1 = 0f; // TASK: related to the scope of variable "length1"
-        for (final Item item : playlist1) { // TASK: related to the lifetimes of the variable "item"
+        // calculates the overall length of playlist1:
+        Float length1 = 0f; // TASK 7.2a: identify the scope of variable "length1"
+        for (final Item item : playlist1) {
             length1 = length1 + item.length_secs;
         }
 

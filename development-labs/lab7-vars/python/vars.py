@@ -15,7 +15,7 @@ def setAglobal():
 
 def tryPrintA():
     a = 3 # declaring a local variable
-    printA() # printing the global a, not the one above
+    printA() # printing the global a, not the local one above
 
 print("test1: setA()")
 setA()
