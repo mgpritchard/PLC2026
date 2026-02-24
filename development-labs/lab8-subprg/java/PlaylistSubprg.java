@@ -111,7 +111,7 @@ public class PlaylistSubprg {
      */
     public static float getPlaylistLengthTwoItems(List<Item> playlist) throws PlaylistProgress.EndOfPlaylist {
         PlaylistProgress progress = new PlaylistProgress(playlist);
-        // TASK: Is the expression below referentially transparent?
+        // TASK 3a: Is the expression below referentially transparent?
         return twice(progress.getNextItem().length_secs);
     }
 
@@ -169,7 +169,7 @@ public class PlaylistSubprg {
      */
     public static void getPlaylistLength_CopyInCopyOutPassing(List<Item> playlist, FloatHolder result,
             FloatHolder resultNoAds) {
-        // TASK: complete this method, simulating copy-in/copy-out parameter passing
+        // TASK 2b: complete this method, simulating copy-in/copy-out parameter passing
 
 
 
@@ -183,8 +183,9 @@ public class PlaylistSubprg {
     }
 
     public static void main(String[] args)
-        throws PlaylistProgress.EndOfPlaylist {
-        // TASK: remove the above throws declaration and handle the exception properly
+        throws PlaylistProgress.EndOfPlaylist 
+        {
+        // TASK 1b: remove the above throws declaration, and handle the exception properly in the loop at line 234
 
         Piece piece1 = new Piece("Moonlight", "C. Arrau", 17 * 60 + 26f);
         Piece piece2 = new Piece("Pathetique", "D. Barenboim", 16 * 60 + 49f);
@@ -230,7 +231,7 @@ public class PlaylistSubprg {
         System.out.println();
 
         PlaylistProgress progress = new PlaylistProgress(playlist1);
-        while (true) {
+        while (true) { //TASK 1c: Modify this loop to handle the EndOfPlaylist exception
             float remainingLength = progress.getRemainingLength();
             System.out.printf("Next item = %s \n", progress.getNextItem());
             System.out.printf("  remaining play time = %.2f \n", remainingLength);
