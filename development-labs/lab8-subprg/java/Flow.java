@@ -41,7 +41,7 @@ public class Flow
         
         System.out.println(formatF1F2F3(f1,f2,f3));
         
-        // 8.3.(c) TASK:
+        //    Optional self-study exercise:
         //    Write code that is analogous to
         //    lines 34-39 in flow.cpp except
         //    that it simulates *copy-in copy-out* passing

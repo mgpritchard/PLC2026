@@ -82,7 +82,7 @@ public class PlaylistSubprg {
             this(items, 0);
         }
 
-        public Item getNextItem() throws EndOfPlaylist {
+        public Item getNextItem() throws EndOfPlaylist { //Extension Task 3b: Replace with a pure procedure and a pure function
             if (index >= items.size()) {
                 throw new EndOfPlaylist();
             }
@@ -231,7 +231,7 @@ public class PlaylistSubprg {
         System.out.println();
 
         PlaylistProgress progress = new PlaylistProgress(playlist1);
-        while (true) { //TASK 1c: Modify this loop to handle the EndOfPlaylist exception
+        while (true) {        //TASK 1c: Modify this loop to handle the EndOfPlaylist exception
             float remainingLength = progress.getRemainingLength();
             System.out.printf("Next item = %s \n", progress.getNextItem());
             System.out.printf("  remaining play time = %.2f \n", remainingLength);

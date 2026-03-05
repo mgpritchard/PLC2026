@@ -75,5 +75,5 @@ findOKfnIndices ::
     [(String -> Bool)] -> -- list of functions
     [Int] -- indices of those that satisfy the testing fn
 findOKfnIndices fnOK fnList =
-    [] -- TODO: optional TASK 8.4.(b) and Q6
+    [] -- How might we complete this definition?
 

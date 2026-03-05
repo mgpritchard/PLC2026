@@ -73,7 +73,7 @@ getRemainingLength (PlaylistProgress items index) =
     where
     remainingItems = drop index items -- the list without the first index-many items
 
-shiftToNextItem :: PlaylistProgress -> Maybe PlaylistProgress
+shiftToNextItem :: PlaylistProgress -> Maybe PlaylistProgress -- How does this compare to getNextItem() in java?
 shiftToNextItem (PlaylistProgress items index) = 
     if index + 1 < length items 
         then Just (PlaylistProgress items (index + 1))
@@ -92,7 +92,7 @@ processPlaylist action items =
             Nothing -> 
                 action progress -- the last item
 
-getPlaylistLengthTwoItems items =
+getPlaylistLengthTwoItems items = -- Related to Extension Task 3b
     case shiftToNextItem progress of
         Just nextProgress -> Just $
             (item_length_secs (getCurrentItem progress)) 
