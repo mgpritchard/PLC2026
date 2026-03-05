@@ -113,7 +113,7 @@ public class PlaylistSubprgSOLUTION {
      */
     public static float getPlaylistLengthTwoItems(List<Item> playlist) throws PlaylistProgress.EndOfPlaylist {
         PlaylistProgress progress = new PlaylistProgress(playlist);
-        // TASK: Is the expression below referentially transparent?
+        // TASK 3a: Is the expression below referentially transparent?
         float result = 0;
         result += progress.getCurrentItem().length_secs;
         progress.shiftToNextItem();
