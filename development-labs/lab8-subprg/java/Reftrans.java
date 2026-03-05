@@ -24,7 +24,7 @@ public class Reftrans
 
         int result1 =
             list.remove(1) + list.remove(2); // not referentially transparent
-        // TASK 8.2 (a): rewrite the above 2 lines using referentially transparent expressions
+        // Could we rewrite this using referentially transparent expressions?
 
         // create exactly the same lists as before:
         list = new ArrayList<Integer>();
@@ -32,7 +32,7 @@ public class Reftrans
 
         int result2 =
             list.remove(2) + list.remove(1); // not referentially transparent
-        // TASK 8.2 (a): rewrite the above 2 lines using referentially transparent expressions
+        // Could we rewrite this using referentially transparent expressions?
 
         System.out.println("result1 = " + result1);
         System.out.println("result2 = " + result2);
